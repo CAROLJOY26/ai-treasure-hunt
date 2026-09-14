@@ -298,15 +298,17 @@ This output provides a simple way to observe the AI's progress during the game.
 
 ## 📸 Screenshots
 
-Screenshots can be added here to demonstrate the game interface and AI gameplay.
+### 🎮 Gameplay
 
-Recommended screenshots:
+The AI-controlled pirate navigates through the fixed maze using A* pathfinding while collecting gold and avoiding obstacles and damage areas.
 
-- 🎮 Main gameplay
-- 🤖 AI pathfinding
-- 🪙 Treasure collection
-- ❤️ Health system
-- 🏆 Win screen
+![AI Treasure Hunt Gameplay](screenshots/gameplay.png)
+
+### 🏆 Win Screen
+
+The AI successfully collects all treasures and completes the treasure hunt.
+
+![Treasure Hunt Win Screen](screenshots/win-screen.png)
 
 ## 🚀 Future Improvements
 
