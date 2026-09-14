@@ -137,7 +137,6 @@ The default game contains:
 
 ## 📁 Project Structure
 
-```text
 ai-treasure-hunt/
 │
 ├── main.py
@@ -148,3 +147,217 @@ ai-treasure-hunt/
 ├── gold.png
 ├── obstacle.png
 └── pirate_1009968.png
+
+### `main.py`
+
+The main game file.
+
+It contains:
+
+- Game initialization
+- Pygame interface
+- AI movement
+- A* pathfinding
+- Gold collection
+- Damage system
+- Health system
+- Obstacle handling
+- Target selection
+- Game loop
+- Win/lose conditions
+
+### `th.py`
+
+Additional Python code related to the project.
+
+### Image Assets
+
+- `pirate_1009968.png` → Pirate character
+- `gold.png` → Gold treasure
+- `obstacle.png` → Obstacles
+- `damagee.png` → Damage areas
+- `box.png` → Game window icon
+
+## ▶️ How to Run the Project
+
+### Requirements
+
+- Python 3.11
+- Pygame
+
+### 1. Clone the Repository
+
+git clone https://github.com/CAROLJOY26/ai-treasure-hunt.git
+
+### 2. Open the Project Folder
+
+cd ai-treasure-hunt
+
+### 3. Create a Virtual Environment
+
+python -m venv .venv
+
+### 4. Activate the Virtual Environment
+
+For Windows PowerShell:
+
+.venv\Scripts\Activate.ps1
+
+### 5. Install Pygame
+
+python -m pip install pygame
+
+### 6. Run the Game
+
+python main.py
+
+## 🔄 Game Workflow
+
+Start Game
+↓
+Initialize Maze
+↓
+Initialize Pirate
+↓
+Locate Gold
+↓
+Find Reachable Gold
+↓
+Calculate A* Paths
+↓
+Select Nearest Gold
+↓
+Move Pirate
+↓
+Check Obstacles
+↓
+Check Damage
+↓
+Check Gold Collection
+↓
+Select Next Gold
+↓
+Repeat
+↓
+Collect All Gold
+↓
+Win
+
+If the pirate loses all health before completing the objective, the game ends.
+
+## 🎯 AI Decision Making
+
+The AI does not simply move randomly.
+
+Instead, it evaluates the available treasure locations and calculates paths to them.
+
+For every gold location, the AI attempts to find a valid path.
+
+The path with the shortest distance is selected as the next target.
+
+This allows the pirate to automatically navigate through the maze and make decisions based on the current game state.
+
+## 🧩 Pathfinding Rules
+
+The A* algorithm considers neighboring grid positions while searching for a path.
+
+The AI:
+
+- Checks positions within the game boundaries.
+- Avoids obstacle positions.
+- Calculates movement costs.
+- Uses Manhattan distance as a heuristic.
+- Builds a path toward the selected target.
+- Returns the path when the target is reached.
+
+This allows the pirate to navigate around blocked areas instead of moving directly through obstacles.
+
+## 📊 Example Game Output
+
+During gameplay, the terminal can display information such as:
+
+Initial target: (4, 1)
+
+Damage! HP: 90
+Collected gold: 1/10
+Collected gold: 2/10
+Damage! HP: 80
+Collected gold: 3/10
+Collected gold: 4/10
+Collected gold: 5/10
+Damage! HP: 70
+Collected gold: 6/10
+Collected gold: 7/10
+Collected gold: 8/10
+Damage! HP: 60
+Damage! HP: 50
+Collected gold: 9/10
+Collected gold: 10/10
+
+This output provides a simple way to observe the AI's progress during the game.
+
+## 📸 Screenshots
+
+Screenshots can be added here to demonstrate the game interface and AI gameplay.
+
+Recommended screenshots:
+
+- 🎮 Main gameplay
+- 🤖 AI pathfinding
+- 🪙 Treasure collection
+- ❤️ Health system
+- 🏆 Win screen
+
+## 🚀 Future Improvements
+
+Possible improvements for future versions include:
+
+- Add multiple maze levels
+- Add different difficulty levels
+- Add multiple AI strategies
+- Add moving obstacles
+- Add enemies
+- Add different types of treasures
+- Add a scoring system
+- Add sound effects
+- Add background music
+- Add player-controlled mode
+- Add more advanced AI decision making
+- Add performance statistics
+- Add BFS and Dijkstra comparison with A*
+- Add a larger game environment
+
+## 📚 Learning Objectives
+
+This project demonstrates practical experience with:
+
+- Python programming
+- Artificial Intelligence
+- A* pathfinding
+- Heuristic algorithms
+- Grid-based navigation
+- Game development
+- Pygame
+- Collision and obstacle handling
+- Game state management
+- Health systems
+- Automated decision making
+- Graph search algorithms
+
+## 💡 Project Purpose
+
+The purpose of this project is to demonstrate how an AI agent can navigate a game environment and make decisions using a pathfinding algorithm.
+
+Instead of controlling the pirate manually, the AI determines where to move and which treasure to target.
+
+The project combines Artificial Intelligence concepts with interactive game development to create a practical example of pathfinding and automated navigation.
+
+## 👩‍💻 Author
+
+**Carol Joseph Gorgi**
+
+GitHub: [CAROLJOY26](https://github.com/CAROLJOY26)
+
+---
+
+⭐ If you find this project interesting, feel free to explore the code and the AI pathfinding implementation.
